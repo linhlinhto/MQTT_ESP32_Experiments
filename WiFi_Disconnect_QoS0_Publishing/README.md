@@ -23,6 +23,8 @@
 ## Kịch bản thí nghiệm
 
 - Sau khi ESP32 khởi động, sẽ kết nối WiFi vào một điểm phát AP đã định (ssid, và pass trong secrets/wifi.h) --> thành công
+
+
 ![Hình 5](./images/image5.png "Hình 5")
 
 - Sẽ thấy MQTT Client kết nối đến broker thành công và bắt đầu gửi (publish) và nhận (subscribe) số đếm tăng dần trong `echo_topic` đều đặn
@@ -64,6 +66,8 @@ Quan sát thông điệp in ra theo thời gian ta thấy:
 
 ![Hình 9](./images/image9.png "Hình 9")
 **Hình 9**
+
+
 4. Khi ngắt điểm phát WiFi (AP):
 - **Hình 9** ngắt tín hiệu từ bộ phát WiFi - ví dụ: trên điện thoại, giữa chừng khi ESP32 đang publish thông điệp 15 (xem hình 2).
 - Ngay lập tức ssl_client ở lớp dưới trên con ESP32 báo lỗi (ssl_client.cpp:37 ...)

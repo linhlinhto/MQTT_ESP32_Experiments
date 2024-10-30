@@ -1,6 +1,7 @@
 ## Bố trí thí nghiệm 
-
 - sử dụng mosquito tạo 1 broker trên máy cá nhân (PC)
+
+![Hình 5](./images/6.png "Hình 5")
 
 - Sử dung MQTT client tạo 1 client kết nối đến broker mosquito đã tạo ở cổng 1883
 

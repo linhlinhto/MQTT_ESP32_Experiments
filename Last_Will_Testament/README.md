@@ -35,7 +35,6 @@ Quan sát thông điệp in ra theo thời gian ta thấy:
 - **Hình 1** cho thấy: các tín hiệu in ra khi có wifi bình thường
 
 
-
 ![Hình 2](./images/2.png "Hình 2")
 **Hình 2**
 
@@ -46,11 +45,13 @@ Quan sát thông điệp in ra theo thời gian ta thấy:
 
 ![Hình 3](./images/3.png "Hình 3")
 **Hình 3**
+
 4. Khi mở lại điểm phát WiFi (AP):
 - **Hình 3** sau khi mở lại điểm phát wifi sẽ mất 9 giây để kết nối lại sever hivemq và bắt đầu gửi lại từ số 201
 
 ![Hình 4](./images/4.png "Hình 4")
 **Hình 4**
+
 - Ở 1 subcriber đang lấy dữ liệu từ broker sẽ dừng lấy tín hiệu từ 121 và sau khi có lại dữ liệu subcriber sẽ nhận được 1 last will message là "ESP32 disconnected unexpectedly" sau đó tiếp tục nhận dữ liệu từ số 201.
 
 ## Side Note về việc sử dụng Wokwi simulator trên VS code

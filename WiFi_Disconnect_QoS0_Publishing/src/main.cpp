@@ -15,6 +15,8 @@ namespace
     const char *ssid = WiFiSecrets::ssid;
     const char *password = WiFiSecrets::pass;
     const char *echo_topic = "esp32/echo_test";
+    const char *lwt_topic = "esp32/lwt";
+    const char *lwt_message = "ESP32 disconnected unexpectedly";
     unsigned int publish_count = 0;
     uint16_t keepAlive = 15;    // seconds (default is 15)
     uint16_t socketTimeout = 5; // seconds (default is 15)
@@ -50,7 +52,7 @@ void mqttReconnect()
         Serial.println("Attempting MQTT connection...");
         String client_id = "esp32-client-";
         client_id += String(WiFi.macAddress());
-        if (mqttClient.connect(client_id.c_str(), MQTT::username, MQTT::password))
+        if (mqttClient.connect(client_id.c_str(), MQTT::username, MQTT::pass, lwt_topic, 0, false, lwt_message))
         {
             Serial.print(client_id);
             Serial.println(" connected");
